@@ -14,7 +14,7 @@
     <h2>软件学院信息登记表</h2>
     <label for="">身份证号：</label>
     <br>
-    <input type="text" class="form-control" name="cardid">
+    <input type="text" class="form-control" name="cardid" required>
 
     <button type="button"  id="btn"  class="btn btn-success button">下一步</button>
     <div class="info"><a href="http://www.sxuek.com">山西优逸客</a>提供技术支持</div>
@@ -45,7 +45,7 @@ $("#btn").click(function(){
                 location.href = "check.html"
                 localStorage.cardid = cardid
             }else{
-                $(".message").css("display","block")
+                $(".messagebox").css("display","block")
             }
         }
     })
