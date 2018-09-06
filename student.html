@@ -7,8 +7,8 @@
     <title>Document</title>
     <script src="js/rem.js"></script>
     <script src="js/jquery-3.2.1.js"></script>
-    <link rel="stylesheet" href="css/check.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/check.css">
 </head>
 <body>
     <form>
@@ -25,7 +25,7 @@
         <br>
         <label for="special" >专业特长说明：</label>
         <br>
-        <input type="text" id="special" name="special" class="form-control" value="" class="control-label">
+        <input type="text" id="special" name="special" class="form-control" value="" class="control-label" required>
         <br>
         <label for="hobby">兴趣、爱好：</label>
         <br>
@@ -63,6 +63,17 @@
         <div class="info"><a href="http://www.sxuek.com">山西优逸客</a>提供技术支持</div>
         
     </form>
+
+    <div class="messagebox">
+        <div class="message">
+            <h3>提示</h3>
+            <div class="con">
+                
+            </div>
+            <button type="button" id="btn1" class="btn btn-info">确定</button>
+        </div>
+    </div>
+   
 </body>
 <script>
 $("#cardid").val(localStorage.cardid)
@@ -80,20 +91,53 @@ $.ajax({
     }
 })
 
+function required(){
+    let flag = true
+    for(item of $("input[required]")){
+        if(item.value==""){
+            return true
+        }
+    }
+    return false
+}
+
 $("#btn").click(function(){
+    if (required()){
+        return
+    }
     let form = new FormData($("form")[0])
     $.ajax({
         url:"/sd/php/insert.php",
         type:"post",
         data:form,
+        dataType:"json",
         processData:false,
         contentType:false,
         success:function(e){
             console.log(e)
+            if(e.code==0){
+                $(".messagebox").css("display","block")
+                $(".messagebox .con").text("恭喜你，任务完成")
+                $(".messagebox").attr("isok",0)
+            }else{
+                $(".messagebox").css("display","block")
+                $(".messagebox .con").text("不好意思，服务器出错了，请重新填写")
+                $(".messagebox").attr("isok",1)
+            }
         }
     })
 
     return false
+})
+
+$(".messagebox button").click(function(){
+    $(".messagebox").css("display","none")
+    let isok = $('.messagebox').attr("isok")
+    if(isok==0){
+        location.href = "index.html"
+    }else{
+        
+    }
 })
 </script>
 
