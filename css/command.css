@@ -5,8 +5,10 @@ body{
 h2{
     font-size:0.36rem;
     border-bottom: 1px dashed #333;
-    padding:0.36rem;
+    padding:0.36rem 0;
     font-weight: bold;
+    color:#2691FD;
+    text-align: center;
 }
 label{
     padding:0.3rem 0;
