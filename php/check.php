@@ -1,11 +1,12 @@
 <?php
-//$cardid = $_GET['cardid'];
-$cardid = '142726200112260343';
+$cardid = $_GET['cardid'];
 include_once 'db.php';
 
 $sql = "select * from student where cardid='{$cardid}'";
 
-$result = $mysql->query($sql)->fetch_all(MYSQLI_ASSOC);
+$result = $mysql->query($sql)->fetch_assoc();
+
+
 
 if(count($result)>0){
     $msg = [

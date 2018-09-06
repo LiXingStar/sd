@@ -41,12 +41,12 @@ $("#btn").click(function(){
         },
         dataType:"json",
         success:function(e){
-            if(e.code==0){
-                location.href = "check.html"
-                localStorage.cardid = cardid
-            }else{
-                $(".message").css("display","block")
-            }
+             if(e.code==0){
+                 location.href = "check.html"
+                 localStorage.cardid = cardid
+             }else{
+                 $(".messagebox").css("display","block")
+             }
         }
     })
 })
