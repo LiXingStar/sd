@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/rem.js"></script>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+    <h2>软件学院信息登记表</h2>
+    <label for="">身份证号：</label>
+    <br>
+    <input type="text" class="form-control" name="cardid">
+
+    <button type="button"  id="btn"  class="btn btn-success button">下一步</button>
+    <div class="info"><a href="http://www.sxuek.com">山西优逸客</a>提供技术支持</div>
+
+
+    <div class="messagebox">
+        <div class="message">
+            <h3>提示</h3>
+            <div class="con">
+                身份证号输入有误请重新输入
+            </div>
+            <button type="button" id="btn1" class="btn btn-info">确定</button>
+        </div>
+    </div>
+</body>
+<script>
+$(".btn").ajax({
+    url:"/sd/php/check.php",
+    data:{
+        cardid:$("[name=cardid]").val()
+    }
+})
+
+</script>
+</html>
