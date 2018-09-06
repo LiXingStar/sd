@@ -1,15 +1,14 @@
 <?php
+$cardid = $_POST['cardid'];
+unset($_POST['cardid']);
 $value = $_POST;
 
-$keys = array_keys($value);
-$values = array_values($value);
-
-$strKey = join(',',$keys);
-$strValues = join("','",$values);
-
-$strValues = "'".$strValues."'";
-$sql="insert into parents($strKey) value($strValues)";
-
+include_once 'db.php';
+$sql ="update parents set ";
+foreach ($value as $k=>$v){
+    $sql .= $k ."='".$v."',";
+}
+$sql = substr($sql,0,-1) ."where cardid='{$cardid}'";
 $mysql->query($sql);
 
 if($mysql->affected_rows == 1){
@@ -23,6 +22,5 @@ if($mysql->affected_rows == 1){
         'msg'=>'操作成功'
     ] ;
 }
-
 echo json_encode($msg);
 

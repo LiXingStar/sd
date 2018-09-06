@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0ecc719d-43e5-4eb8-b35e-e033150f17a8" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/parentsinfo.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/studentinfo.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/php/insert.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/insert.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/query.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/query.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/insert1.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/insert1.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -35,20 +33,29 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="insert.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="insert.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/php/insert.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="224">
-              <caret line="10" column="35" lean-forward="true" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
+            <state relative-caret-position="192">
+              <caret line="15" column="7" lean-forward="true" selection-end-line="26" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="insert1.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="student.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/student.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-2368">
+              <caret line="16" column="50" selection-start-line="16" selection-start-column="44" selection-end-line="16" selection-end-column="50" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="insert1.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/php/insert1.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="64">
-              <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+            <state relative-caret-position="192">
+              <caret line="6" column="21" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -103,7 +110,6 @@
         <option value="$PROJECT_DIR$/js/file.js" />
         <option value="$PROJECT_DIR$/php/demo.php" />
         <option value="$PROJECT_DIR$/php/db.php" />
-        <option value="$PROJECT_DIR$/php/insert1.php" />
         <option value="$PROJECT_DIR$/php/check.php" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/php/parents.php" />
@@ -112,6 +118,7 @@
         <option value="$PROJECT_DIR$/php/student.php" />
         <option value="$PROJECT_DIR$/studentinfo.html" />
         <option value="$PROJECT_DIR$/php/insert.php" />
+        <option value="$PROJECT_DIR$/php/insert1.php" />
       </list>
     </option>
   </component>
@@ -195,12 +202,12 @@
       <updated>1536144660875</updated>
       <workItem from="1536144662131" duration="6503000" />
       <workItem from="1536194510190" duration="70000" />
-      <workItem from="1536200646314" duration="4331000" />
+      <workItem from="1536200646314" duration="4986000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10904000" />
+    <option name="totallyTimeSpent" value="11559000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -416,24 +423,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/student.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="4" column="72" lean-forward="true" selection-start-line="4" selection-start-column="72" selection-end-line="4" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/php/query.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="256">
           <caret line="8" column="20" lean-forward="true" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/php/insert1.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
         </state>
       </provider>
     </entry>
@@ -458,10 +451,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/student.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2368">
+          <caret line="16" column="50" selection-start-line="16" selection-start-column="44" selection-end-line="16" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/php/insert.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="10" column="35" lean-forward="true" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
+        <state relative-caret-position="192">
+          <caret line="15" column="7" lean-forward="true" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/insert1.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="6" column="21" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
         </state>
       </provider>
     </entry>
