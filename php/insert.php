@@ -1,5 +1,7 @@
 <?php
-$value = $_POST['lists'];
+$cardid = $_POST['cardid'];
+unset($_POST['cardid']);
+$value = $_POST;
 
 include_once 'db.php';
 
