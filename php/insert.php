@@ -1,8 +1,8 @@
 <?php
-$lists = $_POST['lists'];
+$value = $_POST['lists'];
 
 include_once 'db.php';
-foreach($lists as $key => &$value){
+
 //    $value['classes'] = substr($value['number'],8,2);
 
     $keys = array_keys($value);
@@ -30,5 +30,4 @@ foreach($lists as $key => &$value){
         ] ;
     }
     echo json_encode($msg);
-}
 
