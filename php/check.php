@@ -1,6 +1,6 @@
 <?php
-$cardid = $_GET['cardid'];
-
+//$cardid = $_GET['cardid'];
+$cardid = '142726200112260343';
 include_once 'db.php';
 
 $sql = "select * from student where cardid='{$cardid}'";
