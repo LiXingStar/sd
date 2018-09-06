@@ -16,10 +16,19 @@ foreach($lists as $key => &$value){
 
     $sql="insert into parents($strKey) value($strValues)";
 
-    $pdo->exec($sql);
+    $mysql->query($sql);
 
-
-
-
+    if($mysql->affected_rows == 1){
+        $msg =  [
+            'code'=>0,
+            'msg'=>'操作成功'
+        ] ;
+    }else{
+        $msg =  [
+            'code'=>0,
+            'msg'=>'操作成功'
+        ] ;
+    }
+    echo json_encode($msg);
 }
 
