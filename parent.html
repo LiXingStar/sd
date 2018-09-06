@@ -16,15 +16,15 @@
         <input type="hidden" value="" name="cardid" id="cardid">
         <label for="classes">班级：</label>
         <br>
-        <input type="text" id="classes" name="classes" class="form-control" value="201802810916" required readonly>
+        <input type="text" id="classes" name="classes" class="form-control" value="" required readonly>
         <br>
         <label for="number">学号：</label>
         <br>
-        <input type="text" id="number" name="number"  class="form-control" value="201802810916" required readonly>
+        <input type="text" id="number" name="number"  class="form-control" value="" required readonly>
         <br>
         <label for="name">姓名：</label>
         <br>
-        <input type="text" id="name" name="name"  class="form-control" value="潘静茹" required readonly>
+        <input type="text" id="name" name="name"  class="form-control" value="" required readonly>
         <br>
         <label for="fanme">父亲姓名：</label>
         <br>
@@ -79,9 +79,9 @@
     
 
         <button type="button" id="btn" class="btn btn-success button">确认提交</button>
-        <div class="info"><a href="http://www.sxuek.com">山西优逸客</a>提供技术支持</div>
     </form>
-
+    <div class="info"><a href="http://www.sxuek.com">山西优逸客</a>提供技术支持</div>
+    
     <div class="messagebox">
         <div class="message">
             <h3>提示</h3>
@@ -108,8 +108,22 @@ $.ajax({
     }
 })
 
+function required(){
+    let flag = true
+    for(item of $("input[required]")){
+        if(item.value==""){
+            return true
+        }
+    }
+    return false
+}
+ 
+
 
 $("#btn").click(function(){
+    if (required()){
+        return
+    }
     let form = new FormData($("form")[0])
     $.ajax({
         url:"/sd/php/insert1.php",
