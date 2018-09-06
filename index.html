@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <script src="js/rem.js"></script>
+    <script src="js/jquery-3.2.1.js"></script>
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
@@ -30,12 +31,28 @@
     </div>
 </body>
 <script>
-$(".btn").ajax({
-    url:"/sd/php/check.php",
-    data:{
-        cardid:$("[name=cardid]").val()
-    }
+$("#btn").click(function(){
+    let cardid = $("[name=cardid]").val()
+    $.ajax({
+        type:"get",
+        url:"/sd/php/check.php",
+        data:{
+            cardid:cardid
+        },
+        dataType:"json",
+        success:function(e){
+            if(e.code==0){
+                location.href = "check.html"
+                localStorage.cardid = cardid
+            }else{
+                $(".message").css("display","block")
+            }
+        }
+    })
 })
 
+$(".message>button").click(function(){
+    $("[name=cardid]").val("")
+})
 </script>
 </html>
