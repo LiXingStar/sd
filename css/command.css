@@ -1,0 +1,13 @@
+body{
+    padding:0.24rem;
+    color:#333;
+}
+h2{
+    font-size:0.36rem;
+    border-bottom: 1px dashed #333;
+    padding:0.36rem;
+    font-weight: bold;
+}
+label{
+    padding:0.3rem 0;
+}

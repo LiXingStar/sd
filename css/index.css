@@ -1,15 +1,4 @@
-body{
-    padding:0.24rem;
-}
-h2{
-    font-size:0.36rem;
-    border-bottom: 1px dashed #333;
-    padding:0.24rem;
-}
-label{
-    padding:0.3rem 0;
-}
-
+@import url("command.css");
 .info{
     text-align:center;
     margin-top:1rem;

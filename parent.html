@@ -6,73 +6,144 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <script src="js/rem.js"></script>
-    <link rel="stylesheet" href="css/check.css">
+    <script src="js/jquery-3.2.1.js"></script>
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/check.css">
 </head>
 <body>
-    <h2>软件学院信息登记表</h2>
-    <label for="">班级：</label>
-    <br>
-    <input type="text"  class="form-control" value="201802810916" readonly>
-    <br>
-    <label for="">学号：</label>
-    <br>
-    <input type="text"  class="form-control" value="201802810916" readonly>
-    <br>
-    <label for="">姓名：</label>
-    <br>
-    <input type="text"  class="form-control" value="潘静茹" readonly>
-    <br>
-    <label for="">父亲姓名：</label>
-    <br>
-    <input type="text"  class="form-control" value="" readonly class="control-label">
-    <br>
-    <label for="">工作单位：</label>
-    <br>
-    <input type="text"  class="form-control" value="20011226" readonly>
-    <br>
-    <label for="">电话：</label>
-    <br>
-    <input type="text"  class="form-control" value="142726200112260343" readonly>
-    <br>
-    <label for="">邮箱：</label>
-    <br>
-    <input type="text"  class="form-control" value="142726200112260343" readonly>
-    <br>
-    <label for="">母亲姓名：</label>
-    <br>
-    <input type="text"  class="form-control" value="" readonly class="control-label">
-    <br>
-    <label for="">工作单位：</label>
-    <br>
-    <input type="text"  class="form-control" value="20011226" readonly>
-    <br>
-    <label for="">电话：</label>
-    <br>
-    <input type="text"  class="form-control" value="142726200112260343" readonly>
-    <br>
-    <label for="">邮箱：</label>
-    <br>
-    <input type="text"  class="form-control" value="18140826150441" readonly>
-    <br>
-    <label for="">家庭住址：</label>
-    <br>
-    <input type="text"  class="form-control" value="18140826150441" readonly>
-    <br>
-    <label for="">孩子情况说明
-        （生理、心理有特殊情况需说明）：</label>
-    <br>
-    <input type="text"  class="form-control" value="18140826150441" readonly>
-    <br>
-    <label for="">家庭情况
-        （特殊情况如离异单亲需说明）：</label>
-    <br>
-    <input type="text"  class="form-control" value="18140826150441" readonly>
-    <br>
-   
+    <form>
+        <h2>软件学院信息登记表</h2>
+        <input type="hidden" value="" name="cardid" id="cardid">
+        <label for="classes">班级：</label>
+        <br>
+        <input type="text" id="classes" name="classes" class="form-control" value="201802810916" required readonly>
+        <br>
+        <label for="number">学号：</label>
+        <br>
+        <input type="text" id="number" name="number"  class="form-control" value="201802810916" required readonly>
+        <br>
+        <label for="name">姓名：</label>
+        <br>
+        <input type="text" id="name" name="name"  class="form-control" value="潘静茹" required readonly>
+        <br>
+        <label for="fanme">父亲姓名：</label>
+        <br>
+        <input type="text"  id="fname" name="fname" class="form-control" value="" required class="control-label">
+        <br>
+        <label for="fword">工作单位：</label>
+        <br>
+        <input type="text" id="fword" name="fword" class="form-control" value="" required>
+        <br>
+        <label for="fphone">电话：</label>
+        <br>
+        <input type="text" id="fphone" name="fphone"  class="form-control" value="" required>
+        <br>
+        <label for="fqq">邮箱(QQ)：</label>
+        <br>
+        <input type="text" id="fqq" name="fqq" class="form-control" value="" required>
+        <br>
+        <label for="mname">母亲姓名：</label>
+        <br>
+        <input type="text" id="mname" name="mname" class="form-control" value="" required class="control-label">
+        <br>
+        <label for="mword">工作单位：</label>
+        <br>
+        <input type="text" id="mword" name="mword" class="form-control" value="" required>
+        <br>
+        <label for="mphone">电话：</label>
+        <br>
+        <input type="text" id="mphone" name="mphone"  class="form-control" value="" required>
+        <br>
+        <label for="mqq">邮箱(QQ)：</label>
+        <br>
+        <input type="text" id="mqq" name="mqq"  class="form-control" value="" required>
+        <br>
+        <label for="address">家庭住址：</label>
+        <br>
+        <input type="text" id="address" name="address" class="form-control" value="" required>
+        <br>
+        <label for="health">孩子情况说明
+            （生理、心理有特殊情况需说明）：</label>
+        <br>
+        <input type="text" id="health" name="health" class="form-control" value="" required>
+        <br>
+        <label for="family">家庭情况
+            （特殊情况如离异单亲需说明）：</label>
+        <br>
+        <input type="text" id="family" name="family"  class="form-control" value="" required>
+        <br>
+        <label for="remarks">备注</label>
+        <br>
+        <input type="text" id="remarks" name="remarks"  class="form-control" value="" required>
+        <br>
+    
 
-    <button type="button" class="btn btn-success button">确认提交</button>
-    <div class="info"><a href="http://www.sxuek.com">山西优逸客</a>提供技术支持</div>
+        <button type="button" id="btn" class="btn btn-success button">确认提交</button>
+        <div class="info"><a href="http://www.sxuek.com">山西优逸客</a>提供技术支持</div>
+    </form>
 
+    <div class="messagebox">
+        <div class="message">
+            <h3>提示</h3>
+            <div class="con">
+                
+            </div>
+            <button type="button" id="btn1" class="btn btn-info">确定</button>
+        </div>
+    </div>
 </body>
+<script>
+$("#cardid").val(localStorage.cardid)
+$.ajax({
+    type:"get",
+    url:"/sd/php/query.php",
+    dataType:"json",
+    data:{
+        cardid:localStorage.cardid
+    },
+    success:function(e){
+        for(item in e){
+            $(`#${item}`).val(e[item])
+        }
+    }
+})
+
+
+$("#btn").click(function(){
+    let form = new FormData($("form")[0])
+    $.ajax({
+        url:"/sd/php/insert1.php",
+        type:"post",
+        data:form,
+        dataType:"json",
+        processData:false,
+        contentType:false,
+        success:function(e){
+            console.log(e)
+            if(e.code==0){
+                $(".messagebox").css("display","block")
+                $(".messagebox .con").text("恭喜你，任务完成")
+                $(".messagebox").attr("isok",0)
+            }else{
+                $(".messagebox").css("display","block")
+                $(".messagebox .con").text("不好意思，服务器出错了，请重新填写")
+                $(".messagebox").attr("isok",1)
+            }
+        }
+    })
+
+    return false
+})
+
+$(".messagebox button").click(function(){
+    $(".messagebox").css("display","none")
+    let isok = $('.messagebox').attr("isok")
+    if(isok==0){
+        location.href = "index.html"
+    }else{
+        
+    }
+})
+
+</script>
 </html>
